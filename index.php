@@ -16,12 +16,8 @@
                     }
                     include('views/'.$view.'.php');
                     ?>
+                <?php include('templates/footer.php'); ?>
             </div>
-            
-            <div style="margin-top:5%" class="row">
-            </div>
-
-            <?php include('templates/footer.php'); ?>
         </div>
         
     </div>

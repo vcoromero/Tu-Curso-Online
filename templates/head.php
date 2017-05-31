@@ -4,4 +4,5 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tu Curso Online</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/app.css">
 </head>
