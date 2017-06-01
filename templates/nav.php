@@ -14,7 +14,7 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cursos<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="?sec=cursos-activos">Activos</a></li>
+                    <li><a href="?sec=cursos-actuales">Actuales</a></li>
                     <li><a href="?sec=cursos-preparacion">Preparación</a></li>
                 </ul> 
             </li>

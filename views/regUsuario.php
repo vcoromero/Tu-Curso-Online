@@ -20,11 +20,18 @@
                                 <label for="">Contraseña:</label>
                                 <input type="password" class="form-control" name="contrasena" placeholder="Ingrese su contraseña" required="required">
                             </div>
-                            <a class="btn btn-primary" href="?sec=regUsuario2" role="button">Siguiente</a>
+                            
+                            <a class="btn btn-success" href="?sec=regUsuario2" role="button">Siguiente</a>
                             
                         </form>
                   </div>
             </div>
         </div>
+        <!--<div class="col-md-6">
+            IZQUIERDA
+        </div>
+        <div class="col-md-6">
+            DERECHA
+        </div>-->
     </div>
 </div>
