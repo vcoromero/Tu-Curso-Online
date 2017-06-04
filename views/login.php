@@ -13,11 +13,9 @@ $data=$obj->validarLogin($_POST['usuario'],$_POST['contrasena']);
             <h2>Inicia sesión para ver los más recientes cursos que tenemos aquí</h2>
         </div>
         <div style="padding: 10px" class="col-md-4 col-md-offset-4">
-                <?php if(isset($_GET['msg']))
-                {
-                    echo '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$_GET['msg'].'</div>';
-                }
-                ?>
+                <?php if(isset($_GET['msg'])):?>
+                    <div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><?php echo $_GET['msg']; ?></div>
+                <?php endif; ?>
                 
             <div class="panel panel-success">
                 <div class="panel-body">                            

@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default navbar-inverse" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -21,16 +20,31 @@
             <li><a href="?sec=ser-tutor">¡¿Quieres ser tutor?!</a></li>
             <li><a href="?sec=conocenos">Conócenos</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="?sec=login">Iniciar sesión</a></li>
+         <ul class="nav navbar-nav navbar-right">
+         <?php       
+            if(!isset($_SESSION['estado'])){ ?>
+           <li><a href="?sec=login">Iniciar sesión</a></li>
             <li><a href="?sec=regUsuario">Registrarse</a></li>
+            <?php }else { ?>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['nombreUsuario']?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="?sec=cursos-activos">Mis datos</a></li>
-                    <li><a href="?sec=cursos-preparacion">Cerrar sesión</a></li>
+                    <li><a href="?sec=misDatos">Mis datos</a></li>
+                    <?php if($_SESSION['tipoUsuario']==1):?>
+                        <li><a href="?sec=panelAdministrativo">Panel administrativo</a></li>
+                    <?php endif;?>
+                    <?php if($_SESSION['tipoUsuario']==2):?>
+                        <li><a href="?sec=panelTutor">Panel Tutor</a></li>
+                    <?php endif;?>
+                    <?php if($_SESSION['tipoUsuario']==3):?>
+                        <li><a href="?sec=panelTutorado">Panel Tutorado</a></li>
+                    <?php endif;?>
+                    <li><a href="salir.php">Cerrar sesión</a></li>
                 </ul> 
             </li>
+          <?php 
+          }
+        ?>
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>

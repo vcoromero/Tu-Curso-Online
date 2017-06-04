@@ -1,3 +1,7 @@
+<?php
+session_start();
+// session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <?php include_once('templates/head.php');?>
